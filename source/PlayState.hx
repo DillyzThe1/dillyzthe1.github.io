@@ -3,8 +3,6 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import openfl.filters.BlurFilter;
-import openfl.filters.ShaderFilter;
 import shaders.WavyShader;
 
 class PlayState extends FlxState
