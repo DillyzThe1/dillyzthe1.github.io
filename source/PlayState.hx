@@ -16,6 +16,7 @@ class PlayState extends FlxState
 	private var dillyzPFP:FlxSprite;
 	private var dillyzTitle:FlxText;
 	private var dillyzSubTitle:FlxText;
+	private var dillyzSubTitle2:FlxText;
 
 	private var camGame:FlxCamera;
 	private var camHUD:FlxCamera;
@@ -48,21 +49,28 @@ class PlayState extends FlxState
 		dillyzPFP.y = FlxG.height - dillyzPFP.height;
 		dillyzPFP.antialiasing = true;
 
-		dillyzTitle = new FlxText(0, 20, 0, " DillyzThe1 \n ", 16, true);
+		dillyzTitle = new FlxText(0, 20, 0, "DillyzThe1", 16, true);
 		dillyzTitle.setFormat(Paths.font('FredokaOne-Regular'), 64, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.NONE, FlxColor.TRANSPARENT, true);
 		//dillyzTitle.borderSize = 5;
 		dillyzTitle.screenCenter(X);
 		dillyzTitle.antialiasing = true;
 		add(dillyzTitle);
 
-		dillyzSubTitle = new FlxText(0, 100, 0, " The one friend with all the digital skills you needed. \n ", 16, true);
-		dillyzSubTitle.setFormat(Paths.font('FredokaOne-Regular'), 8*3, 0xFFBBBBBB, FlxTextAlign.CENTER, FlxTextBorderStyle.NONE, FlxColor.TRANSPARENT, true);
+		dillyzSubTitle = new FlxText(0, 100, 0, "The one friend with all the digital skills you needed.", 16, true);
+		dillyzSubTitle.setFormat(Paths.font('FredokaOne-Regular'), 24, 0xFFDCDCDC, FlxTextAlign.CENTER, FlxTextBorderStyle.NONE, FlxColor.TRANSPARENT, true);
 		//dillyzSubTitle.borderSize = 5;
 		dillyzSubTitle.screenCenter(X);
 		dillyzSubTitle.antialiasing = true;
 		add(dillyzSubTitle);
 
-		dillyzPFP.cameras = dillyzTitle.cameras = dillyzSubTitle.cameras = [camHUD];
+		dillyzSubTitle2 = new FlxText(0, 128, 0, "Programming | Art | Animation | Music | Pixel Art | Pixel Animation", 16, true);
+		dillyzSubTitle2.setFormat(Paths.font('FredokaOne-Regular'), 16, 0xFFBBBBBB, FlxTextAlign.CENTER, FlxTextBorderStyle.NONE, FlxColor.TRANSPARENT, true);
+		//dillyzSubTitle.borderSize = 5;
+		dillyzSubTitle2.screenCenter(X);
+		dillyzSubTitle2.antialiasing = true;
+		add(dillyzSubTitle2);
+
+		dillyzPFP.cameras = dillyzTitle.cameras = dillyzSubTitle.cameras = dillyzSubTitle2.cameras =  [camHUD];
 		camHUD.setFilters([new GlowFilter(0x00000000, 1, 6, 6, 2, 3, false, false)]);
 
 		bgShader.totalElapsed.value = [0];
