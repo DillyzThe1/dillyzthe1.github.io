@@ -19,7 +19,7 @@ class WavyShader extends FlxShader {
         }
 
         vec2 wavyPoint(vec2 og) {
-            return vec2(clampFloat(og.x + (cos(totalElapsed*1.25)/2.0) + og.y/4.0, 0.0, 1.0), clampFloat(og.y + (sin(totalElapsed*1.5)/2.0) + og.x/4.0, 0.0, 1.0));
+            return vec2(clampFloat(og.x + (cos(totalElapsed*1.25 + og.y*4.0)/2.0), 0.0, 1.0), clampFloat(og.y + (sin(totalElapsed*1.75 + og.x*5.5)/2.0), 0.0, 1.0));
         }
 
         void main() {
