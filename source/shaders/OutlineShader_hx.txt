@@ -1,0 +1,35 @@
+package shaders;
+
+import flixel.system.FlxAssets.FlxShader;
+
+class OutlineShader extends FlxShader {
+
+    @:glFragmentSource('
+        #pragma header
+
+        float shaderDist = 0.00225;
+        float yMult = 16.0 / 9.0;
+
+        vec4 colorFromOffset(float offx, float offy) {
+            return flixel_texture2D(bitmap, openfl_TextureCoordv + vec2(offx, offy*yMult));
+        }
+
+        void main() {
+            vec4 color = flixel_texture2D(bitmap, openfl_TextureCoordv);
+            //vec4 outputPixel = vec4(color.x, color.y, color.z, 1.0);
+            
+            
+            if (colorFromOffset(shaderDist, 0.0).a > 0.0 || colorFromOffset(-shaderDist, 0.0).a > 0.0
+                || colorFromOffset(0.0, shaderDist).a > 0.0 || colorFromOffset(0.0, -shaderDist).a > 0.0
+                || colorFromOffset(shaderDist, shaderDist).a > 0.0 || colorFromOffset(-shaderDist, shaderDist).a > 0.0
+                || colorFromOffset(-shaderDist, -shaderDist).a > 0.0 || colorFromOffset(shaderDist, -shaderDist).a > 0.0)
+                gl_FragColor = color + (vec4(0.0, 0.0, 0.0, 1.0) * (1.0 - color.a));
+            else
+                gl_FragColor = color;
+        }
+    ')
+
+    public function new() {
+        super();
+    }
+}

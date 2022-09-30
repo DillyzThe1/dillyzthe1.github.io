@@ -9,6 +9,7 @@ enum PathAssetType
 	XML;
 	MUSIC;
 	SOUND;
+	FONT;
 	TEXTURE_ATLAS;
 }
 
@@ -39,6 +40,9 @@ class Paths
 			case SOUND:
 				subFolder = 'sounds';
 				fileExtension = #if web 'mp3' #else 'ogg' #end;
+			case FONT:
+				subFolder = 'fonts';
+				fileExtension = 'ttf';
 			case TEXTURE_ATLAS:
 				subFolder = 'images';
 				fileExtension = null;
@@ -69,6 +73,9 @@ class Paths
 
 	inline public static function sound(path:String)
 		return asset(path, SOUND);
+
+	inline public static function font(path:String)
+		return asset(path, FONT);
 
 	inline public static function sparrowv2(path:String)
 		return FlxAtlasFrames.fromSparrow(image(path), xml(path));
