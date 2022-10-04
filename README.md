@@ -1,2 +1,7 @@
-# dillyzthe1.github.io
+# <a href="dillyzthe1.github.io">dillyzthe1.github.io<a/>
  A github site to showcase what I can do. Please check it out :)
+ 
+
+ NOTE: I DO NOT OWN THE WEBSITE ICON NOR DO I OWN THE MINECRAFT STUFF IN THE PROFILE PICTURE.
+ ALL THE ICONS LINK TO MY PROFILE ON THEIR ASSOCIATED WEBSITE, AS IT IS NOT AN ASSET OF MY OWN.
+ THE PROFILE PICTURE IS HERE TO SIMPLY COPY WHAT I'VE USED AS REPRESENTATION OF MYSELF.
