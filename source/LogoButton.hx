@@ -40,6 +40,8 @@ class LogoButton extends FlxSprite {
                     FlxG.openURL('https://github.com/DillyzThe1');
                 case 'youtube':
                     FlxG.openURL('https://www.youtube.com/c/DillyzThe1/');
+                case 'gamebanana':
+                    FlxG.openURL('https://gamebanana.com/members/2088207');
                 default:
                     trace('forgot $siteName');
             }
