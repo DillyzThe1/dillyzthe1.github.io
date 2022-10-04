@@ -71,7 +71,7 @@ class PlayState extends FlxState
 		dillyzSubTitle2.antialiasing = true;
 		add(dillyzSubTitle2);
 
-		var githubButton:LogoButton = new LogoButton(dillyzPFP.x - 100 - 64, dillyzPFP.y + 32, 'GitHub-Mark-Light-64px', 'github');
+		var githubButton:LogoButton = new LogoButton(dillyzPFP.x - 50 - 64, dillyzPFP.y + dillyzPFP.height/2 - 32, 'GitHub-Mark-Light-64px', 'github');
 		githubButton.antialiasing = true;
 		add(githubButton);
 

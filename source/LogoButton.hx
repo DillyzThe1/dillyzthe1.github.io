@@ -31,7 +31,7 @@ class LogoButton extends FlxSprite {
             if (lastTween != null)
                 lastTween.cancel();
 
-            lastTween = FlxTween.tween(this.scale, {x: lastHovering ? 1.075 : 0.95, y: lastHovering ? 1.075 : 0.95}, 0.65, {ease: FlxEase.cubeInOut});
+            lastTween = FlxTween.tween(this.scale, {x: lastHovering ? 1.075 : 0.95, y: lastHovering ? 1.075 : 0.95}, 0.25, {ease: FlxEase.cubeInOut});
         }
 
         if (lastHovering && FlxG.mouse.justPressed) {
