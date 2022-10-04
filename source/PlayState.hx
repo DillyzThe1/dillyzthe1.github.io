@@ -75,7 +75,11 @@ class PlayState extends FlxState
 		githubButton.antialiasing = true;
 		add(githubButton);
 
-		dillyzPFP.cameras = dillyzTitle.cameras = dillyzSubTitle.cameras = dillyzSubTitle2.cameras = githubButton.cameras = [camHUD];
+		var youtubeButton:LogoButton = new LogoButton(dillyzPFP.x + 150 + 82 - 32, dillyzPFP.y + dillyzPFP.height/2 - 32, 'youtube', 'youtube');
+		youtubeButton.antialiasing = true;
+		add(youtubeButton);
+
+		dillyzPFP.cameras = dillyzTitle.cameras = dillyzSubTitle.cameras = dillyzSubTitle2.cameras = githubButton.cameras = youtubeButton.cameras = [camHUD];
 		camHUD.setFilters([new GlowFilter(0x00000000, 1, 6, 6, 2, 3, false, false)]);
 
 		bgShader.totalElapsed.value = [0];

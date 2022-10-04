@@ -14,8 +14,8 @@ class LogoButton extends FlxSprite {
         super(x, y);
 
         loadGraphic(Paths.image(logoName));
-        setGraphicSize(64, 64);
-        updateHitbox();
+       // setGraphicSize(64, 64);
+        //updateHitbox();
 
         this.siteName = siteName;
         lastHovering = false;
@@ -38,6 +38,8 @@ class LogoButton extends FlxSprite {
             switch (siteName) {
                 case 'github':
                     FlxG.openURL('https://github.com/DillyzThe1');
+                case 'youtube':
+                    FlxG.openURL('https://www.youtube.com/c/DillyzThe1/');
                 default:
                     trace('forgot $siteName');
             }
