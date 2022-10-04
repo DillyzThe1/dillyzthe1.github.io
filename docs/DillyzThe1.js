@@ -910,18 +910,18 @@ var ApplicationMain = function() { };
 $hxClasses["ApplicationMain"] = ApplicationMain;
 ApplicationMain.__name__ = "ApplicationMain";
 ApplicationMain.main = function() {
-	lime_system_System.__registerEntryPoint("dillyzthe1.github.io",ApplicationMain.create);
+	lime_system_System.__registerEntryPoint("DillyzThe1",ApplicationMain.create);
 };
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "13";
-	app.meta.h["company"] = "HaxeFlixel";
-	app.meta.h["file"] = "dillyzthe1.github.io";
-	app.meta.h["name"] = "dillyzthe1.github.io";
+	app.meta.h["build"] = "18";
+	app.meta.h["company"] = "DillyzThe1";
+	app.meta.h["file"] = "DillyzThe1";
+	app.meta.h["name"] = "DillyzThe1";
 	app.meta.h["packageName"] = "com.example.myapp";
-	app.meta.h["version"] = "0.0.1";
-	var attributes = { allowHighDPI : true, alwaysOnTop : false, borderless : false, element : null, frameRate : 60, height : 720, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : true, title : "dillyzthe1.github.io", width : 1280, x : null, y : null};
+	app.meta.h["version"] = "1.0.0";
+	var attributes = { allowHighDPI : true, alwaysOnTop : false, borderless : false, element : null, frameRate : 60, height : 720, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : true, title : "DillyzThe1", width : 1280, x : null, y : null};
 	attributes.context = { antialiasing : 0, background : 0, colorDepth : 32, depth : true, hardware : true, stencil : true, type : null, vsync : false};
 	if(app.__window == null) {
 		if(config != null) {
@@ -70148,7 +70148,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 289203;
+	this.version = 217099;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -122950,7 +122950,7 @@ ApplicationMain.main();
 });
 $hx_exports.lime = $hx_exports.lime || {};
 $hx_exports.lime.$scripts = $hx_exports.lime.$scripts || {};
-$hx_exports.lime.$scripts["dillyzthe1.github.io"] = $hx_script;
+$hx_exports.lime.$scripts["DillyzThe1"] = $hx_script;
 $hx_exports.lime.embed = function(projectName) { var exports = {};
 	var script = $hx_exports.lime.$scripts[projectName];
 	if (!script) throw Error("Cannot find project name \"" + projectName + "\"");
