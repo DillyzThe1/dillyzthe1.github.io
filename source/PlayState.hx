@@ -1,5 +1,6 @@
 package;
 
+import LogoButton;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -70,7 +71,11 @@ class PlayState extends FlxState
 		dillyzSubTitle2.antialiasing = true;
 		add(dillyzSubTitle2);
 
-		dillyzPFP.cameras = dillyzTitle.cameras = dillyzSubTitle.cameras = dillyzSubTitle2.cameras =  [camHUD];
+		var githubButton:LogoButton = new LogoButton(dillyzPFP.x - 100 - 64, dillyzPFP.y + 32, 'GitHub-Mark-Light-64px', 'github');
+		githubButton.antialiasing = true;
+		add(githubButton);
+
+		dillyzPFP.cameras = dillyzTitle.cameras = dillyzSubTitle.cameras = dillyzSubTitle2.cameras = githubButton.cameras = [camHUD];
 		camHUD.setFilters([new GlowFilter(0x00000000, 1, 6, 6, 2, 3, false, false)]);
 
 		bgShader.totalElapsed.value = [0];
